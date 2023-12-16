@@ -1,0 +1,27 @@
+.father {
+    display: grid;
+    grid-template-columns:[line01] 100px [line02] 200px [line03] 30px [line04];
+    grid-template-rows: [line05] 200px [line06] 100px [line07] ;
+    row-gap: 10px;
+    column-gap: 20px;
+
+}
+
+.child {
+    display: flex;
+    background-color: tomato;
+    color: white;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+.child:first-child {
+    background-color: khaki;
+    /* grid-row: span 2; 2개의 행을 차지하도록 함 */
+}
+
+.child:last-child {
+    background-color: turquoise;
+    grid-column: line02 / span 2; /* 시작라인 line02를 지정해 주고 거기서 부터 2개의 셀을 차지 */
+}
