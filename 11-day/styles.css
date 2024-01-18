@@ -1,0 +1,98 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #fff;
+}
+
+.select-header {
+    display: flex;
+    border-top: 1px solid black;
+}
+
+.select-header select {
+    flex: 1;
+    border: 1px solid black;
+    padding: 10px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.gallery-item {
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.item-header,
+.item-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.item-header {
+    top: 0;
+}
+
+.item-footer {
+    bottom: 0;
+}
+
+.gallery-item img {
+    width: 80%;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.author,
+.year {
+    text-align: left;
+}
+
+.affiliation,
+.read-more {
+    text-align: right;
+}
+
+.read-more {
+    text-align: right;
+    color: black;
+    /* 링크의 색상을 검은색으로 고정니다. */
+    text-decoration: none;
+}
+
+.read-more:hover,
+.read-more:visited,
+.read-more:active {
+    color: black;
+}
+@media (max-width: 600px) {
+    .select-header {
+        flex-direction: column;
+    }
+
+    .select-header select {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
